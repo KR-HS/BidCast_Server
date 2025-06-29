@@ -40,8 +40,6 @@ const producers = new Map() // key = roomid , value = Map(key = producerId, valu
 const consumers = new Map()
 const socketRoomMap = new Map() // socketId -> roomId
 
-const hostSocketId = null // 현재 호스트의 socket.id를 저장하는 변수
-
 const socketIdMap = new Map(); // key:loginId, value:socket.id
 const auctionHostMap = new Map(); // auctionId -> hostSocketId
 
