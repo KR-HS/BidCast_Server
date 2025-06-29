@@ -1,3 +1,10 @@
+BIDCAST 서버 입니다.
+
+[BIDCAST app코드](https://github.com/KR-HS/BidCast)
+
+[BIDCAST 홈페이지](https://bidcast.kro.kr)
+
+
 dbconfig파일을 만들어서 같은 경로에 DB에 접근할수 있는 정보를 담아야 동작합니다.
 
 내부의 DB코드들 또한 DB에 맞게 수정 또는 생성하여 사용해야합니다.
