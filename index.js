@@ -861,14 +861,15 @@ io.on('connection', socket => {
     console.log(`Socket disconnected: ${socket.id}`);
 
 
-    // Close and delete all transports for this socket
+    // 해당 소켓의 모든 Transport 닫고 삭제
     for (const [transportId, data] of transports) {
       if (data.socketId === socket.id) {
         data.transport.close()
         transports.delete(transportId)
       }
     }
-    // Close and delete all producers for this socket + notify others
+
+    // 해당 소켓의 모든 Producer 닫고 삭제
     for (const [roomId, roomProducers] of producers) {
       for (const [producerId, data] of roomProducers) {
         if (data.socketId === socket.id) {
@@ -885,6 +886,7 @@ io.on('connection', socket => {
         producers.delete(roomId)
       }
     }
+    
     // Close and delete all consumers for this socket
     for (const [consumerId, data] of consumers) {
       if (data.socketId === socket.id) {
